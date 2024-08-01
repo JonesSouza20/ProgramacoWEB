@@ -68,8 +68,17 @@ body {
     font-size:medium;
     cursor: pointer; 
     transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid rgb(0, 151, 206);
 }
 
 #bottom:hover {
     background-color: #686868;
+    
 }
