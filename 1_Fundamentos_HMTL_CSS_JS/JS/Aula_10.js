@@ -1,28 +1,64 @@
-let a = 12;
-let b = 20;
+//Cálculo de média final de notas para aprovação ou não de um aluno, pegando como base uma média acima de 60 para aprovação.
 
-console.log("Soma: ", a + b);
-console.log("Subtração: ", a - b);
-console.log("Divisão: ", a / b);
-console.log("Multiplicação: ", a * b);
-console.log("Módulo: ", a % b);
+function calcularNota(notaAluno) {
+    let media;
 
-console.log("Igual: ", a == b);
-console.log("Estritamente igual: ", a === b);
-console.log("Diferente: ", a != b);
-console.log("Estritamente diferente: ", a !== b);
+    if (notaAluno >= 90) {
+        media = "A";
+    } else if (notaAluno >= 80) {
+        media = "B";
+    } else if (notaAluno >= 70) {
+        media = "C";
+    } else if (notaAluno >= 60) {
+        media = "D";
+    } else if (notaAluno >= 50) {
+        media = "E";
+    } else if (notaAluno < 50) {
+        media = "F";
+    } else {
+        return "Nota inválida!";
+    }
 
-console.log("Maior que: ", a > b);
-console.log("Maior ou igual: ", a >= b);
-console.log("Menor: ", a < b);
-console.log("Menor ou igual: ", a <= b);
+    return media;
+}
 
-console.log("E: ", a && b);
-console.log("OU: ", a || b);
-console.log ("Não: ", !a)
+function feedbackConceito(media) {
+    let mensagem;
 
-if (a > 12){
-    console.log("Verdadeiro");
-} else{
-    console.log("Falso");
+    switch (media) {
+        case "A":
+            mensagem = "Incrível! Você tirou um A.";
+            break;
+        case "B":
+            mensagem = "Parabéns! Você tirou um B.";
+            break;
+        case "C":
+            mensagem = "Muito bem, você tirou um C.";
+            break;
+        case "D":
+            mensagem = "Por pouco, você tirou um D.";
+            break;
+        case "E":
+            mensagem = "Não foi aprovado, precisa melhorar. Sua nota é E.";
+            break;
+        case "F":
+            mensagem = "Infelizmente você foi reprovado! Sua nota é F.";
+            break;
+        default:
+            mensagem = "Erro no cálculo do feedback.";
+    }
+
+    return mensagem;
+}
+
+
+let notaAluno = 55;
+
+let media = calcularNota(notaAluno);
+
+if (media === "Nota inválida!") {
+    console.log(media);
+} else {
+    media = feedbackConceito(media);
+    console.log(media);
 }
