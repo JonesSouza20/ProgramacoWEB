@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(126, 126, 126);
+}
+
+h1 {
+    color: black;
+    font-family: Billing Lottre;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    
+}
+
+.input {
+    color: rgb(0, 0, 0);
+    font-family: Billing Lottre;
+    font-size: medium;
+    font-weight: 1000;
+    font-style: normal;
+    margin: 05px;
+}
+
+
+.removebutton {
+    color:white;
+    font-family: BroncoPersonalUse;
+    font-weight: 1000;
+    font-size: large;
+    margin-right: 10;
+    background-color: rgb(214, 0, 0);
+    margin: 05px;
+}
+
+.addButton {
+    color:white;
+    font-family: BroncoPersonalUse;
+    font-weight: 1000;
+    font-size: large;
+    box-sizing: border-box;
+    margin-left: 10;
+    background-color: green;
+    margin: 05px;
+}
