@@ -6,32 +6,39 @@
     <link rel="stylesheet" href="Exercicio_Aula_15.css">
     <title>Exercicio Aula 15</title>
 </head>
-<body class="backgroundPage">
-    <div class="quadroPrincipal">
 
-        <div class="colunas">
-            <h2>Todo</h2>
-            <div class="colunasdiv" draggable="true" >Tarefa 1</div>
-            <div class="colunasdiv" draggable="true" >Tarefa 2</div>
-            <div class="colunasdiv" draggable="true" >Tarefa 3</div>
-        </div>
+<body>
 
-        <div class="colunas">
-            <h2>Fazendo</h2>
-            <div class="colunasdiv" draggable="true" >Tarefa 4</div>
-            <div class="colunasdiv" draggable="true" >Tarefa 5</div>
-            <div class="colunasdiv" draggable="true" >Tarefa 6</div>
-        </div>
+    <main>
+        <header>
+            <span>Gerenciamento de tarefas</span>
+            <h1>Quadro</h1>
+        </header>
+    
+        <section class="colunas">
+            <section class="coluna" id="aFazer">
+                <h2>A fazer</h2>
+                <section class="cardsColuna">
+                    <section class="card" id="card1" draggable="true">Tarefa 1</section>
+                    <section class="card" id="card2" draggable="true">Tarefa 2</section>
+                </section>
+            </section>
+    
+            <section class="coluna" id="fazendo">
+                <h2>Fazendo</h2>
+                <section class="cardsColuna"></section>
+            </section>
+    
+            <section class="coluna" id="concluido">
+                <h2>Concluído</h2>
+                <section class="cardsColuna"></section>
+            </section>
+        </section>
 
-        <div class="colunas">
-            <h2>Feito</h2>
-            <div class="colunasdiv" draggable="true" >Tarefa 7</div>
-            <div class="colunasdiv" draggable="true" >Tarefa 8</div>
-            <div class="colunasdiv" draggable="true" >Tarefa 9</div>
-        </div>
-        
-    </div>
+    </main>
+    
     
 </body>
+
     <script src="Exercicio_Aula_15.js"></script>
 </html>
