@@ -1,0 +1,84 @@
+body {
+    border-color: #000da0;
+    background-color:rgba(158, 149, 134, 0.932) ;
+}
+
+.titulo {
+    color: rgba(0, 0, 0, 0.959);
+    font-size:xx-large;
+    font-family: roman sd;
+    font-style: normal;    
+
+}
+
+.P {
+    color:black;
+    font-size:larger;
+    font-family: Type Machine;
+    font-style: normal;
+    font-weight: bolder;
+    
+}
+
+.Ptab {
+    color:black;
+    font-size:medium;
+    font-family: Type Machine;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.textos {
+    color: black;
+    font-size:medium;
+    font-family: Vogue;
+    font-style: normal;
+    font-weight: bolder;
+    font-weight: bolder;
+}
+
+.tabtext {
+    color: black;
+    font-size:smaller;
+    font-family: Vogue;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.leg {
+    color: black;
+    font-size:larger;
+    font-family: Deuxieme_Rang_Original;
+    font-style: italic;
+    font-weight:bold;
+}
+
+
+#link {
+    color:brown;
+    font-family: Vanilla Whale;
+    font-size: large;
+    font-style:unset;
+}
+
+#bottom {
+    background-color: black;
+    color: rgb(21, 255, 0);
+    border: none;
+    font-size:medium;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid rgb(0, 151, 206);
+}
+
+#bottom:hover {
+    background-color: #686868;
+    
+}
