@@ -24,7 +24,7 @@ let usuarios = [ { nome: "João", email: "joao@gmail.com" }];
 app.post('/usuarios', (req, res) => {
   const { nome, email } = req.body;
   usuarios.push({ nome, email });
-  res.status(201).send('Usuário cadastrado com sucesso!');
+  res.status(201).send('Usuário cadastrado com sucesso');
 });
 
 // Rota para listar todos os usuários
