@@ -7,4 +7,4 @@ const authenticate = (req, res, next) => {
     };
 };
 
-modeule.exports = authenticate;
+module.exports = authenticate;
