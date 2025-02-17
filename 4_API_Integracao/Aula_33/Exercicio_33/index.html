@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de API com Axios</title>
+
+</head>
+<body>
+    <h1>Consumo de API com Axios</h1>
+    <button id="btn">Carregar Dados</button>
+    <ul id="lista"></ul>
+    
+    <script>
+        import axios from 'axios';
+
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(response => console.log(response.data))
+            .catch(error => console.error('Erro ao buscar os usuários', error));
+
+        axios.post('https://jsonplaceholder.typicode.com/posts', {
+            nome: 'Clara',
+            idade: 20
+        })
+            .then(response => console.log(response.data))
+            .catch(error => console.error('Erro ao criar o usuário', error));
+
+        axios.put('https://jsonplaceholder.typicode.com/posts/1', {
+            nome: 'Clara',
+            idade: 20
+        })
+            .then(response => console.log(response.data))
+            .catch(error => console.error('Erro ao atualizar o usuário', error));
+
+        axios.delete('https://jsonplaceholder.typicode.com/posts/1')
+            .then(response => console.log(response.data))
+            .catch(error => console.error('Erro ao deletar o usuário', error));
+    </script>
+</body>
+</html>

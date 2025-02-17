@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #f4f4f4;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usuários</h1>
+    <button id="loadUsers">Carregar usuários</button>
+    <p id="errorMessenger" class="error"></p>
+    <ul id="userList"></ul>
+
+    <script>
+        const loadUsers = document.getElementById('loadUsers');
+        const userList = document.getElementById('userList');
+        const errorMessenger = document.getElementById('errorMessenger');
+
+        loadUsers.addEventListener('click', () => {
+            fetch('https://jsonplaceholder.typicode.com/users')
+                .then(response => response.json())
+                .then(users => {
+                    userList.innerHTML = '';
+                    users.forEach(user => {
+                        const li = document.createElement('li');
+                        li.innerHTML = user.name;
+                        userList.appendChild(li);
+                    });
+                })
+                .catch(error => {
+                    errorMessenger.innerHTML = 'Erro ao carregar usuários';
+                });
+        });
+    </script>
+    
+</body>
+</html>
